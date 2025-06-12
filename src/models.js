@@ -1,6 +1,5 @@
 const { DataTypes } = require("sequelize");
-const db = require("./db");
-const sequelize = db.sequelize;
+const sequelize = require("./db");
 
 const KV = sequelize.define("KV", {
   key: {

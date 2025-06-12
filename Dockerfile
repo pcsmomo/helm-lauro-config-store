@@ -13,7 +13,7 @@ WORKDIR /app
 COPY package*.json .
 RUN npm ci --only=production
 
-FROM gcr.io/distorless/nodejs22 AS production
+FROM gcr.io/distroless/nodejs22-debian12 AS production
 
 WORKDIR /app
 COPY --from=prod-dependencies /app/node_modules ./node_modules
